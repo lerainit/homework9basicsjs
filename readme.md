@@ -46,7 +46,7 @@ document.body.append(title);
 
 // Результат в html:
 // <h1>Welcome to our dental clinik</h1>
-//<div id ="about"><p>We provide all necessary procedures for the health of //your teeth ahnd oral cavity</p></div>
+// <div id ="about"><p>We provide all necessary procedures for the health of //your teeth ahnd oral cavity</p></div>
 
 
 ```
