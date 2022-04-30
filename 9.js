@@ -91,5 +91,18 @@ const insertTransformedArray = (position, str) => document.body.insertAdjacentHT
 
 insertTransformedArray('afterbegin', transformArray(cities, 'li','ul'));
 
+// Функция для очищения страницы через промежуток времени:
+
+const removeHtml = (el,time) => {
+
+let html = document.querySelectorAll(el)
+
+setTimeout( () => html.forEach (item => item.remove()),time)
+
+}
+
+removeHtml(3000,'ul')
+   
+
 
 
