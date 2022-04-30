@@ -95,23 +95,27 @@ setTimeout( () => htmlElems.forEach (item => item.remove()),time)
 }
 removeHtml('ul',3000)
 
-// Таймер до очистки страницы    
+// Функция-таймер до очистки страницы    
 
-let secs = 3;
+const Timer = (secs) =>{
 
 document.body.insertAdjacentHTML('afterbegin', '<p>Осталось cекунд</p>')
 
 let mySpan = document.querySelector('p')
 
+  mySpan.insertAdjacentHTML('afterend', `<span> ${secs} </span>`);
+  let span = document.querySelector('span');
+  setInterval(() => span.remove(), 1000)
+
 let timer = setInterval(() => {
 
-  mySpan.insertAdjacentHTML('afterend', `<span> ${--secs} </span>`)
-  let span = document.querySelector('span')
+  mySpan.insertAdjacentHTML('afterend', `<span> ${--secs} </span>`);
+  let span = document.querySelector('span');
   setInterval(() => span.remove(), 1000)
 
 }, 1000)
 
-setTimeout(() =>  clearInterval(timer), 3000);
+setTimeout(() =>  clearInterval(timer), secs*1000);}
 
-
+Timer(3)
 
