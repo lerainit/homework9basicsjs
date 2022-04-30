@@ -1,3 +1,5 @@
+"use strict'
+
 
 let citiesSimple = ['kyiv', 'kharkiv', 'dnipro', 'vinnytsa', 'lviv', 'rivne'];
 
@@ -7,18 +9,15 @@ function createList(array) {
 
   let newArray = array.map(item => `<li>${item}</li>`);
 
-
   return newArray.join(' ');
 
 }
 
-
 function insertList(position,str, elem = document.body ) {
 
-  if (elem === document.body) {
+    if (elem === document.body) {
 
-
-    return elem.insertAdjacentHTML(position, str)
+    return elem.insertAdjacentHTML(position, str);
 
   }
 
@@ -26,7 +25,6 @@ function insertList(position,str, elem = document.body ) {
   let elem1 = document.createElement(elem);
 
   document.body.append(elem1);
-
 
   return elem1.insertAdjacentHTML(position, str);
 
@@ -39,30 +37,24 @@ insertList('afterbegin',createList(citiesSimple),'ul');
 /* Второй вариант решения для простых массивов */
 
 
-
 function listCreate(array,elem = document.body) {
 
-
-  let newArray = array.map(item => `<li>${item}</li>`)
-
+  let newArray = array.map(item => `<li>${item}</li>`);
 
   if (elem === document.body) {
 
     return newArray.join(' ');
+  
   }
 
-
   let newList = newArray.join(' ');
-
 
   return `<${elem}>${newList}</${elem}>`
 
 
 }
 
-
 function listInsert(position, str) {
-
 
   return document.body.insertAdjacentHTML(position, str);
 
@@ -85,7 +77,7 @@ function transformArray(array, elchild, elem = document.body) {
   let newArr = array.map(item => Array.isArray(item) ? `<${elchild}>${transformArray(item, elchild, elem)}</${elchild}>` : `<${elchild}>${item}</${elchild}>`);
 
 
-  if (elem === document.body) { return newArr.join(' ') }
+  if (elem === document.body) {return newArr.join(' ')}
 
 
   let newStr = newArr.join(' ');
@@ -98,5 +90,7 @@ function transformArray(array, elchild, elem = document.body) {
 const insertTransformedArray = (position, str) => document.body.insertAdjacentHTML(position, str)
 
 
+insertTransformedArray('afterbegin', transformArray(cities, 'li','ul'));
 
-insertTransformedArray('afterbegin', transformArray(cities, 'li','ul'))
+
+
