@@ -1,7 +1,7 @@
 ## Создание нового HTML -тега
 </hr>
 
--document.createElement(Tag):
+- document.createElement(Tag):
 
 ```js
 
