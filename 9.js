@@ -101,7 +101,7 @@ setTimeout( () => html.forEach (item => item.remove()),time)
 
 }
 
-removeHtml(3000,'ul')
+removeHtml('ul',3000)
    
 
 
