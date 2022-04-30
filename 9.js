@@ -70,7 +70,6 @@ const cities = ["Rivne", ["Kharkiv", "lviv"], "Kiev", ["Borispol", "Irpin"], "Od
 
 function transformArray(array, elchild, elem = document.body) {
 
-
   let newArr = array.map(item => Array.isArray(item) ? `<${elchild}>${transformArray(item, elchild, elem)}</${elchild}>` : `<${elchild}>${item}</${elchild}>`);
 
   if (elem === document.body) {return newArr.join(' ')}
