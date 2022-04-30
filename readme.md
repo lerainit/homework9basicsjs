@@ -8,7 +8,7 @@
 let title = document.createElement('div') 
 //создает новый html элемент 'div'
 
-title.className = 'title'
+title.classList.add('title');
 // присвоение класса элементу
 
 title.innerHTML = 'This is our first news.'
