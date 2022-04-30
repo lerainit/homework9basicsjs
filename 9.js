@@ -88,7 +88,6 @@ function transformArray(array, elchild, elem = document.body) {
 
 const insertTransformedArray = (position, str) => document.body.insertAdjacentHTML(position, str)
 
-
 insertTransformedArray('afterbegin', transformArray(cities, 'li','ul'));
 
 // Функция для очищения страницы через промежуток времени:
