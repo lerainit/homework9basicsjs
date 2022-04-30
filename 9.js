@@ -94,9 +94,9 @@ insertTransformedArray('afterbegin', transformArray(cities, 'li','ul'));
 
 const removeHtml = (el,time) => {
 
-let html = document.querySelectorAll(el)
+let htmlElem = document.querySelectorAll(el)
 
-setTimeout( () => html.forEach (item => item.remove()),time)
+setTimeout( () => htmlElem.forEach (item => item.remove()),time)
 
 }
 
