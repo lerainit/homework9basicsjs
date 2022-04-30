@@ -1,4 +1,4 @@
-"use strict'
+"use strict"
 
 let citiesSimple = ['kyiv', 'kharkiv', 'dnipro', 'vinnytsa', 'lviv', 'rivne'];
 
