@@ -35,21 +35,19 @@ insertList('afterbegin',createList(citiesSimple),'ul');
 
 /* Второй вариант решения для простых массивов */
 
-
 function listCreate(array,elem = document.body) {
 
   let newArray = array.map(item => `<li>${item}</li>`);
 
   if (elem === document.body) {
 
-    return newArray.join(' ');
+   return newArray.join(' ');
   
   }
 
   let newList = newArray.join(' ');
 
   return `<${elem}>${newList}</${elem}>`
-
 
 }
 
@@ -75,12 +73,9 @@ function transformArray(array, elchild, elem = document.body) {
 
   let newArr = array.map(item => Array.isArray(item) ? `<${elchild}>${transformArray(item, elchild, elem)}</${elchild}>` : `<${elchild}>${item}</${elchild}>`);
 
-
   if (elem === document.body) {return newArr.join(' ')}
 
-
   let newStr = newArr.join(' ');
-
 
   return `<${elem}>${newStr}</${elem}>`;
 
@@ -99,7 +94,6 @@ let htmlElems = document.querySelectorAll(el)
 setTimeout( () => htmlElems.forEach (item => item.remove()),time)
 
 }
-
 removeHtml('ul',3000)
 
 // Таймер до очистки страницы    
