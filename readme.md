@@ -5,7 +5,7 @@
 
 ```js
 
-let title = document.createElement('div') 
+const title = document.createElement('div') 
 //создает новый html элемент 'div'
 
 title.classList.add('title');
