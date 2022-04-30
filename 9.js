@@ -97,7 +97,7 @@ removeHtml('ul',3000)
 
 // Таймер до очистки страницы    
 
-let secs = 4;
+let secs = 3;
 
 document.body.insertAdjacentHTML('afterbegin', '<p>Осталось cекунд</p>')
 
