@@ -1,7 +1,7 @@
 "use strict'
 
-
 let citiesSimple = ['kyiv', 'kharkiv', 'dnipro', 'vinnytsa', 'lviv', 'rivne'];
+
 
 /* Первый вариант решения для простых массивов*/
 
@@ -21,7 +21,6 @@ function insertList(position,str, elem = document.body ) {
 
   }
 
-
   let elem1 = document.createElement(elem);
 
   document.body.append(elem1);
@@ -32,7 +31,7 @@ function insertList(position,str, elem = document.body ) {
 
 insertList('afterbegin',createList(citiesSimple),'ul');
 
-/*--------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Второй вариант решения для простых массивов */
 
