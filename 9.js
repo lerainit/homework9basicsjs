@@ -1,6 +1,6 @@
 "use strict"
 
-let citiesSimple = ['kyiv', 'kharkiv', 'dnipro', 'vinnytsa', 'lviv', 'rivne'];
+const citiesSimple = ['kyiv', 'kharkiv', 'dnipro', 'vinnytsa', 'lviv', 'rivne'];
 
 
 /* Первый вариант решения для простых массивов*/
@@ -67,7 +67,7 @@ listInsert('beforeend', listCreate(citiesSimple,'ul'));
 
 /* Вариант для массивов с вложенными масивами--------*/
 
-let cities = ["Rivne", ["Kharkiv", "lviv"], "Kiev", ["Borispol", "Irpin"], "Odessa", ["Lviv","Cherihiv","Uzhhorod"], "Dnieper"];
+const cities = ["Rivne", ["Kharkiv", "lviv"], "Kiev", ["Borispol", "Irpin"], "Odessa", ["Lviv","Cherihiv","Uzhhorod"], "Dnieper"];
 
 
 function transformArray(array, elchild, elem = document.body) {
