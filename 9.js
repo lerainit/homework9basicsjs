@@ -118,7 +118,7 @@ let timer = setInterval(() => {
 
 }, 1000)
 
-setTimeout(() => { clearInterval(timer); console.log('stop'); }, 3000);
+setTimeout(() =>  clearInterval(timer), 3000);
 
 
 
